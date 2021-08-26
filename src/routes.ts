@@ -6,26 +6,16 @@ export default [
     name: 'home',
     exact: true,
     component: () => import('./pages/Home'),
-    // component: React.lazy(() => import('./pages/Home')), // drop the .map?
   },
   {
-    path: '/user/:id',
+    path: '/users/:id',
     exact: true,
-    component: () => import('./pages/users/[id]')
-  },
-//   {
-//     path: '/about',
-//     name: 'about',
-//     component: () => import('./pages/About'),
-//   },
-//   {
-//     path: '/post/:postId',
-//     name: 'post',
-//     component: () => import('./pages/post'),
-//     meta: {
-//       propsGetter: 'post',
-//     },
-//   },
+    component: () => import('./pages/users/[id]'),
+    meta: {
+      propsGetter: 'js-works',
+      // propsGetter: 'ts-fails'
+    },
+  }
 ].map(({ component: fn, ...route }) => {
   let component = null
   return {

@@ -22,7 +22,7 @@ export default function Home(...args: any[]) {
         </p>
         <div>
 
-          <Link to={'/user/1234'}><button>To random user</button></Link>
+          <Link to={'/users/1234'}><button>To random user</button></Link>
         </div>
     </>
   )
