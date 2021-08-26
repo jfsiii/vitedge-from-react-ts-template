@@ -12,8 +12,9 @@ export default [
     exact: true,
     component: () => import('./pages/users/[id]'),
     meta: {
-      propsGetter: 'js-works',
-      // propsGetter: 'ts-fails'
+      // propsGetter: 'js-works',
+      // propsGetter: 'ts-fails',
+      propsGetter: 'users/[id]', // works for .js; not .ts
     },
   }
 ].map(({ component: fn, ...route }) => {
