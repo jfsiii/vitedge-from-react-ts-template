@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
 export default function Home(...args: any[]) {
@@ -19,29 +20,10 @@ export default function Home(...args: any[]) {
             count is: {count}
           </button>
         </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://vitedge.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vitedge Docs
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
+        <div>
 
+          <Link to={'/user/1234'}><button>To random user</button></Link>
+        </div>
     </>
   )
 }

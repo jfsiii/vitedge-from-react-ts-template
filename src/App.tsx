@@ -1,6 +1,9 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
+
 import "./App.css";
+import AppFooter from "./components/AppFooter";
+import AppHeader from "./components/AppHeader";
+
 import { renderRoutes } from "react-router-config";
 import { Context } from "vitedge/react";
 
@@ -10,10 +13,9 @@ function App(ctx: Context, unknown: unknown) {
   const { router } = ctx;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <AppHeader />
       {renderRoutes(router.routes)}
+      <AppFooter />
     </div>
   );
 }

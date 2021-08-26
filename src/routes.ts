@@ -8,6 +8,11 @@ export default [
     component: () => import('./pages/Home'),
     // component: React.lazy(() => import('./pages/Home')), // drop the .map?
   },
+  {
+    path: '/user/:id',
+    exact: true,
+    component: () => import('./pages/users/[id]')
+  },
 //   {
 //     path: '/about',
 //     name: 'about',
