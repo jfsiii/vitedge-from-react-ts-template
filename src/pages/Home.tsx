@@ -3,14 +3,14 @@ import { Helmet } from 'react-helmet-async'
 
 export default function Home(...args: any[]) {
   const [count, setCount] = useState(0)
-  console.log('Home called with', ...args);
+  console.count('pages/home called')
+  console.log('Home called with', args.length, 'items', args.map(arg => Object.keys(arg)));
   return (
     <>
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Home</title>
-        <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 
       <p>Hello Vite + React!</p>
@@ -25,11 +25,11 @@ export default function Home(...args: any[]) {
         <p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://vitedge.js.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Vitedge Docs
           </a>
           {' | '}
           <a

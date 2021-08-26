@@ -16,7 +16,6 @@
     "vitedge": "^0.16.0"
   },
   "devDependencies": {
-    "@types/connect": "^3.4.35",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-config": "^5.0.3",
