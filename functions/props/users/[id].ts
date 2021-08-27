@@ -1,4 +1,6 @@
-export default {
+import type { EdgeProps } from 'vitedge/define'
+
+export default <EdgeProps>{
   handler({ event, request, params = {}, query = {} }) {
     console.log('props/users/[id]')
     return {
