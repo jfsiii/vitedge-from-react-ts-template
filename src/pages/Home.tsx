@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import type { Context } from "vite-ssr/react/types";
 
@@ -21,10 +20,6 @@ export default function Home(ctx: Context, ...rest: any[]) {
             count is: {count}
           </button>
         </p>
-        <div>
-
-          <Link to={'/users/1234'}><button>To random user</button></Link>
-        </div>
     </>
   )
 }
