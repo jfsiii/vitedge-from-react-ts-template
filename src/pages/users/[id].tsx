@@ -1,8 +1,10 @@
 import React from 'react'
 import type { Context } from "vite-ssr/react/types";
+import type { PropData } from '../../../functions/props/users/[id]'
 import { Helmet } from 'react-helmet-async'
 
-const UserDetail = function UserDetail(ctx:Context) {
+
+const UserDetail = function UserDetail(ctx:Context & PropData) {
   console.log('pages/user/[id] called with', ctx);
   const fromPath = ctx.match.params.id;
   return (
@@ -14,6 +16,7 @@ const UserDetail = function UserDetail(ctx:Context) {
       </Helmet>
 
       <p>Hello, User {fromPath}</p>
+      <p>{ ctx.msg }</p>
     </>
   )
 }

@@ -1,13 +1,20 @@
 import type { EdgeProps } from 'vitedge/define'
 
+export interface PropData {
+  server: boolean
+  msg: string
+}
+
 export default <EdgeProps>{
   handler({ event, request, params = {}, query = {} }) {
-    console.log('props/users/[id]')
+    console.log('props/users/[id]', params, query)
+    const data: PropData = {
+      server: true,
+      msg: `This is a props/users/[id] response for user ${params.id} `,
+    };
+
     return {
-      data: {
-        server: true,
-        msg: 'This is an EXAMPLE page ',
-      },
+      data,
       headers: {}, // Optional dynamic headers
       status: 200, // Optional status, default 200
     }
