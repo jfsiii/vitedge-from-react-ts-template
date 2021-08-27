@@ -1,9 +1,8 @@
 import React from 'react'
-import type { PageHandler } from "vitedge/react";
-
+import type { Context } from "vite-ssr/react/types";
 import { Helmet } from 'react-helmet-async'
 
-const UserDetail:PageHandler = function UserDetail(ctx) {
+const UserDetail = function UserDetail(ctx:Context) {
   console.log('pages/user/[id] called with', ctx);
   const fromPath = ctx.match.params.id;
   return (

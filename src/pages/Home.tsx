@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import type { Context } from "vite-ssr/react/types";
 
-export default function Home(...args: any[]) {
+export default function Home(ctx: Context, ...rest: any[]) {
   const [count, setCount] = useState(0)
   console.count('pages/home called')
-  console.log('Home called with', args.length, 'items', args.map(arg => Object.keys(arg)));
+  console.log('Home called with', ctx, ...rest);
   return (
     <>
       <Helmet>
