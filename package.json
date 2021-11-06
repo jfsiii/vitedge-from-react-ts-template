@@ -18,6 +18,7 @@
     "vitedge": "^0.16.1"
   },
   "devDependencies": {
+    "@architect/sandbox": "^4.2.3",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-config": "^5.0.3",
